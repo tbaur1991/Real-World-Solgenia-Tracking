@@ -16,6 +16,16 @@
 % the elliptic cylinder, extruded superellipse and FCDS 3D EOT measurement
 % models, as well as the SDFS, SH, and 3D GP comparison methods.
 %
+% In the following lines, several settings can be made. Set 'do_plots' as
+% 'true' or 'false' to show plots of the estimation results. Set 'methods'
+% as 'own' or 'comp' to start my own developed methods or the comparison
+% methods from the literature. Set the 'artificial_noise' as 'true' or
+% 'false' to use the recursively estimated artificial measurement noise to 
+% be able to process mixed boundary and interior measurements or not. Set 
+% the 'filter' as 'ERHM' or 'GAM' for defining the measurement source 
+% association applied. Set 'source' as 'radial' or 'projected' to further 
+% define the measurement source association at specific height sections. 
+%
 % The 3D GP model is taken from: https://github.com/Metu-Sensor-Fusion-Lab
 %
 % *************************************************************************
@@ -36,7 +46,7 @@ meas = cellfun(@double,sol_meas,'UniformOutput',false);
 nSamples = 300;
 
 % simulation environment settings
-do_plots = false;
+do_plots = true;
 
  % choose if own thesis measurement models or comparison methods are
 % evaluated. Choose either 'own', or 'comp'.
